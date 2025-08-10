@@ -1,0 +1,467 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cookie Store Full-Stack - Technical Presentation</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@100;200;300;400;500;600;700&family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Loading Screen -->
+    <div id="loading-screen">
+        <div class="loading-content">
+            <div class="terminal-window">
+                <div class="terminal-header">
+                    <div class="terminal-buttons">
+                        <span class="btn red"></span>
+                        <span class="btn yellow"></span>
+                        <span class="btn green"></span>
+                    </div>
+                    <span class="terminal-title">Initializing Full-Stack Analysis...</span>
+                </div>
+                <div class="terminal-body">
+                    <div class="loading-text">
+                        <span class="prompt">$</span> <span class="command" id="typing-command"></span>
+                        <span class="cursor-blink">|</span>
+                    </div>
+                    <div id="terminal-output"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Navigation -->
+    <nav id="navbar">
+        <div class="nav-container">
+            <div class="nav-brand">
+                <span class="brand-icon">{ }</span>
+                <span class="brand-text">Full-Stack Analysis</span>
+            </div>
+            <div class="nav-links">
+                <a href="#hero" class="nav-link active">Home</a>
+                <a href="#frontend" class="nav-link">Frontend</a>
+                <a href="#backend" class="nav-link">Backend</a>
+                <a href="#fullstack" class="nav-link">Full-Stack</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="hero" class="section">
+        <div class="container">
+            <div class="hero-content">
+                <div class="hero-text">
+                    <h1 class="hero-title">
+                        <span class="title-line">Cookie Store</span>
+                        <span class="title-line highlight">Full-Stack Architecture</span>
+                    </h1>
+                    <p class="hero-subtitle">
+                        A comprehensive technical analysis of a modern e-commerce platform built with React, Node.js, and PostgreSQL
+                    </p>
+                    <div class="hero-stats">
+                        <div class="stat">
+                            <span class="stat-number" data-target="181">0</span>
+                            <span class="stat-label">Total Files</span>
+                        </div>
+                        <div class="stat">
+                            <span class="stat-number" data-target="32937">0</span>
+                            <span class="stat-label">Lines of Code</span>
+                        </div>
+                        <div class="stat">
+                            <span class="stat-number" data-target="35">0</span>
+                            <span class="stat-label">API Endpoints</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="hero-visual">
+                    <div class="code-preview">
+                        <div class="code-header">
+                            <div class="code-tabs">
+                                <span class="tab active">App.jsx</span>
+                                <span class="tab">server.js</span>
+                                <span class="tab">database.js</span>
+                            </div>
+                        </div>
+                        <div class="code-content">
+                            <pre><code id="hero-code"></code></pre>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Frontend Section -->
+    <section id="frontend" class="section">
+        <div class="container">
+            <h2 class="section-title">Frontend Architecture</h2>
+            
+            <!-- Frontend Overview -->
+            <div class="section-overview">
+                <p class="overview-text">
+                    Modern React-based frontend with bilingual support, real-time features, and responsive design
+                </p>
+            </div>
+
+            <!-- Frontend Stats -->
+            <div class="stats-grid">
+                <div class="stat-card">
+                    <div class="stat-icon">REACT</div>
+                    <div class="stat-number">139</div>
+                    <div class="stat-label">Frontend Files</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-icon">JSX</div>
+                    <div class="stat-number">106</div>
+                    <div class="stat-label">Components</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-icon">LOC</div>
+                    <div class="stat-number">23,594</div>
+                    <div class="stat-label">Lines of Code</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-icon">i18n</div>
+                    <div class="stat-number">2</div>
+                    <div class="stat-label">Languages</div>
+                </div>
+            </div>
+
+            <!-- Frontend Technologies -->
+            <div class="tech-section">
+                <h3 class="tech-title">Technologies & Tools</h3>
+                <div class="tech-grid">
+                    <div class="tech-item">
+                        <div class="tech-icon">REACT</div>
+                        <div class="tech-content">
+                            <h4>React 19</h4>
+                            <p>Latest React with concurrent features, server components, and enhanced performance</p>
+                        </div>
+                    </div>
+                    <div class="tech-item">
+                        <div class="tech-icon">VITE</div>
+                        <div class="tech-content">
+                            <h4>Vite Build Tool</h4>
+                            <p>Lightning-fast development server with HMR and optimized production builds</p>
+                        </div>
+                    </div>
+                    <div class="tech-item">
+                        <div class="tech-icon">CSS</div>
+                        <div class="tech-content">
+                            <h4>Tailwind CSS</h4>
+                            <p>Utility-first CSS framework with JIT compilation and responsive design</p>
+                        </div>
+                    </div>
+                    <div class="tech-item">
+                        <div class="tech-icon">ROUTER</div>
+                        <div class="tech-content">
+                            <h4>React Router</h4>
+                            <p>Client-side routing with protected routes and language-based navigation</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Frontend Features -->
+            <div class="features-section">
+                <h3 class="features-title">Key Features</h3>
+                <div class="features-grid">
+                    <div class="feature-item">
+                        <h4>Bilingual Support</h4>
+                        <p>Complete English/Persian localization with RTL layout support and separate component trees</p>
+                    </div>
+                    <div class="feature-item">
+                        <h4>Real-time Inventory</h4>
+                        <p>Live stock tracking with reservation system and automatic conflict resolution</p>
+                    </div>
+                    <div class="feature-item">
+                        <h4>Responsive Design</h4>
+                        <p>Mobile-first approach with adaptive layouts and touch-friendly interactions</p>
+                    </div>
+                    <div class="feature-item">
+                        <h4>Admin Dashboard</h4>
+                        <p>Comprehensive management interface with role-based access and analytics</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Backend Section -->
+    <section id="backend" class="section dark">
+        <div class="container">
+            <h2 class="section-title">Backend Architecture</h2>
+            
+            <!-- Backend Overview -->
+            <div class="section-overview">
+                <p class="overview-text">
+                    Robust Node.js backend with PostgreSQL database, JWT authentication, and comprehensive API design
+                </p>
+            </div>
+
+            <!-- Backend Stats -->
+            <div class="stats-grid">
+                <div class="stat-card">
+                    <div class="stat-icon">NODE</div>
+                    <div class="stat-number">42</div>
+                    <div class="stat-label">Backend Files</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-icon">API</div>
+                    <div class="stat-number">35</div>
+                    <div class="stat-label">Endpoints</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-icon">LOC</div>
+                    <div class="stat-number">9,343</div>
+                    <div class="stat-label">Lines of Code</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-icon">DB</div>
+                    <div class="stat-number">15</div>
+                    <div class="stat-label">Database Tables</div>
+                </div>
+            </div>
+
+            <!-- Backend Technologies -->
+            <div class="tech-section">
+                <h3 class="tech-title">Technologies & Tools</h3>
+                <div class="tech-grid">
+                    <div class="tech-item">
+                        <div class="tech-icon">NODE</div>
+                        <div class="tech-content">
+                            <h4>Node.js</h4>
+                            <p>JavaScript runtime environment with V8 engine for high-performance server applications</p>
+                        </div>
+                    </div>
+                    <div class="tech-item">
+                        <div class="tech-icon">EXPRESS</div>
+                        <div class="tech-content">
+                            <h4>Express.js</h4>
+                            <p>Fast, minimalist web framework with middleware support and RESTful API design</p>
+                        </div>
+                    </div>
+                    <div class="tech-item">
+                        <div class="tech-icon">PSQL</div>
+                        <div class="tech-content">
+                            <h4>PostgreSQL</h4>
+                            <p>Advanced relational database with ACID compliance and complex query support</p>
+                        </div>
+                    </div>
+                    <div class="tech-item">
+                        <div class="tech-icon">JWT</div>
+                        <div class="tech-content">
+                            <h4>JWT + bcrypt</h4>
+                            <p>Secure token-based authentication with password hashing and session management</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Backend Features -->
+            <div class="features-section">
+                <h3 class="features-title">Key Features</h3>
+                <div class="features-grid">
+                    <div class="feature-item">
+                        <h4>MVC Architecture</h4>
+                        <p>Clean separation of concerns with dedicated models, controllers, and service layers</p>
+                    </div>
+                    <div class="feature-item">
+                        <h4>Advanced Security</h4>
+                        <p>JWT authentication, bcrypt hashing, rate limiting, and CORS protection</p>
+                    </div>
+                    <div class="feature-item">
+                        <h4>Real-time Processing</h4>
+                        <p>Background services for inventory management and automatic cleanup operations</p>
+                    </div>
+                    <div class="feature-item">
+                        <h4>AI Integration</h4>
+                        <p>Smart cookie assistant with knowledge base and natural language processing</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Full-Stack Overview Section -->
+    <section id="fullstack" class="section">
+        <div class="container">
+            <h2 class="section-title">Full-Stack Overview</h2>
+            
+            <!-- Full-Stack Overview -->
+            <div class="section-overview">
+                <p class="overview-text">
+                    Complete e-commerce solution combining modern frontend technologies with robust backend infrastructure
+                </p>
+            </div>
+
+            <!-- Architecture Diagram -->
+            <div class="architecture-section">
+                <h3 class="arch-title">System Architecture</h3>
+                <div class="architecture-diagram">
+                    <div class="arch-layer">
+                        <h4>Frontend Layer</h4>
+                        <div class="arch-components">
+                            <span class="arch-component">React Components</span>
+                            <span class="arch-component">State Management</span>
+                            <span class="arch-component">Routing</span>
+                            <span class="arch-component">UI/UX</span>
+                        </div>
+                    </div>
+                    <div class="arch-layer">
+                        <h4>API Layer</h4>
+                        <div class="arch-components">
+                            <span class="arch-component">REST APIs</span>
+                            <span class="arch-component">Authentication</span>
+                            <span class="arch-component">Middleware</span>
+                            <span class="arch-component">Validation</span>
+                        </div>
+                    </div>
+                    <div class="arch-layer">
+                        <h4>Business Logic</h4>
+                        <div class="arch-components">
+                            <span class="arch-component">Controllers</span>
+                            <span class="arch-component">Services</span>
+                            <span class="arch-component">Models</span>
+                            <span class="arch-component">Utils</span>
+                        </div>
+                    </div>
+                    <div class="arch-layer">
+                        <h4>Data Layer</h4>
+                        <div class="arch-components">
+                            <span class="arch-component">PostgreSQL</span>
+                            <span class="arch-component">Migrations</span>
+                            <span class="arch-component">Indexing</span>
+                            <span class="arch-component">Backup</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Project Metrics -->
+            <div class="metrics-section">
+                <h3 class="metrics-title">Project Metrics</h3>
+                <div class="metrics-grid">
+                    <div class="metric-card">
+                        <div class="metric-header">
+                            <h4>Codebase</h4>
+                            <div class="metric-icon">CODE</div>
+                        </div>
+                        <div class="metric-content">
+                            <div class="metric-item">
+                                <span class="metric-label">Total Files</span>
+                                <span class="metric-value">181</span>
+                            </div>
+                            <div class="metric-item">
+                                <span class="metric-label">Lines of Code</span>
+                                <span class="metric-value">32,937</span>
+                            </div>
+                            <div class="metric-item">
+                                <span class="metric-label">Components</span>
+                                <span class="metric-value">106</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="metric-card">
+                        <div class="metric-header">
+                            <h4>Features</h4>
+                            <div class="metric-icon">FEAT</div>
+                        </div>
+                        <div class="metric-content">
+                            <div class="metric-item">
+                                <span class="metric-label">API Endpoints</span>
+                                <span class="metric-value">35+</span>
+                            </div>
+                            <div class="metric-item">
+                                <span class="metric-label">Database Tables</span>
+                                <span class="metric-value">15</span>
+                            </div>
+                            <div class="metric-item">
+                                <span class="metric-label">Languages</span>
+                                <span class="metric-value">2</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="metric-card">
+                        <div class="metric-header">
+                            <h4>Technology</h4>
+                            <div class="metric-icon">TECH</div>
+                        </div>
+                        <div class="metric-content">
+                            <div class="metric-item">
+                                <span class="metric-label">Frontend</span>
+                                <span class="metric-value">React 19</span>
+                            </div>
+                            <div class="metric-item">
+                                <span class="metric-label">Backend</span>
+                                <span class="metric-value">Node.js</span>
+                            </div>
+                            <div class="metric-item">
+                                <span class="metric-label">Database</span>
+                                <span class="metric-value">PostgreSQL</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-main">
+                    <div class="footer-brand">
+                        <h3>Cookie Store Full-Stack</h3>
+                        <p>A comprehensive e-commerce platform showcasing modern web development practices and technologies.</p>
+                    </div>
+                    <div class="footer-links">
+                        <div class="footer-column">
+                            <h4>Frontend</h4>
+                            <ul>
+                                <li>React 19</li>
+                                <li>Vite</li>
+                                <li>Tailwind CSS</li>
+                                <li>React Router</li>
+                            </ul>
+                        </div>
+                        <div class="footer-column">
+                            <h4>Backend</h4>
+                            <ul>
+                                <li>Node.js</li>
+                                <li>Express.js</li>
+                                <li>PostgreSQL</li>
+                                <li>JWT Auth</li>
+                            </ul>
+                        </div>
+                        <div class="footer-column">
+                            <h4>Features</h4>
+                            <ul>
+                                <li>Bilingual Support</li>
+                                <li>Real-time Inventory</li>
+                                <li>Admin Dashboard</li>
+                                <li>AI Integration</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="footer-bottom">
+                    <div class="footer-stats">
+                        <span>181 Files</span>
+                        <span>32,937 Lines</span>
+                        <span>35+ APIs</span>
+                        <span>Full-Stack</span>
+                    </div>
+                    <div class="footer-copyright">
+                        <p>Technical Analysis & Architecture Documentation</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
