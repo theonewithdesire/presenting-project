@@ -2,6 +2,8 @@
 const loadingScreen = document.getElementById('loading-screen');
 const navbar = document.getElementById('navbar');
 const navLinks = document.querySelectorAll('.nav-link');
+const navToggle = document.getElementById('nav-toggle');
+const navLinksContainer = document.getElementById('nav-links');
 const heroCode = document.getElementById('hero-code');
 const fileTreeContent = document.getElementById('file-tree-content');
 
@@ -109,6 +111,7 @@ document.addEventListener('DOMContentLoaded', function () {
 function initializeApp() {
     displayHeroCode();
     initializeNavigation();
+    initializeMobileNavigation();
     initializeAnimations();
     initializeRevealAnimations();
 }
@@ -253,6 +256,31 @@ function initializeNavigation() {
     });
 }
 
+function initializeMobileNavigation() {
+    if (navToggle && navLinksContainer) {
+        navToggle.addEventListener('click', () => {
+            navToggle.classList.toggle('active');
+            navLinksContainer.classList.toggle('active');
+        });
+
+        // Close mobile menu when clicking on a link
+        navLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                navToggle.classList.remove('active');
+                navLinksContainer.classList.remove('active');
+            });
+        });
+
+        // Close mobile menu when clicking outside
+        document.addEventListener('click', (e) => {
+            if (!navbar.contains(e.target)) {
+                navToggle.classList.remove('active');
+                navLinksContainer.classList.remove('active');
+            }
+        });
+    }
+}
+
 function initializeAnimations() {
     // Only animate hero stats that have data-target attributes
     const heroStatNumbers = document.querySelectorAll('#hero .stat-number[data-target]');
@@ -345,6 +373,30 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
         }
     });
 });
+
+// Improve touch interactions on mobile
+if ('ontouchstart' in window) {
+    document.body.classList.add('touch-device');
+}
+
+// Handle orientation changes on mobile
+window.addEventListener('orientationchange', () => {
+    // Close mobile menu on orientation change
+    if (navToggle && navLinksContainer) {
+        navToggle.classList.remove('active');
+        navLinksContainer.classList.remove('active');
+    }
+
+    // Recalculate viewport height for mobile browsers
+    setTimeout(() => {
+        const vh = window.innerHeight * 0.01;
+        document.documentElement.style.setProperty('--vh', `${vh}px`);
+    }, 100);
+});
+
+// Set initial viewport height
+const vh = window.innerHeight * 0.01;
+document.documentElement.style.setProperty('--vh', `${vh}px`);
 
 // Console branding
 console.log('Cookie Store Full-Stack Analysis');
